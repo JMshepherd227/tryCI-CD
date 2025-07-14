@@ -33,7 +33,7 @@ jobs:
           host: ${{ secrets.WSL_HOST }}
           username: ${{ secrets.WSL_USER }}
           key: ${{ secrets.WSL_SSH_KEY }}
-          port: 433     
+          port: 443     
           source: "target/*.jar"
           target: "/home/${{ secrets.WSL_USER }}/app"
 
@@ -43,6 +43,6 @@ jobs:
           host: ${{ secrets.WSL_HOST }}
           username: ${{ secrets.WSL_USER }}
           key: ${{ secrets.WSL_SSH_KEY }}
-          port: 433              
+          port: 443              
           script: |
             sudo systemctl restart myapp.service
